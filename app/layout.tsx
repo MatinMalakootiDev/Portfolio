@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/context/ThemeContext";
 import { LangProvider } from "@/context/LangContext";
 import { HtmlLangSync } from "@/components/HtmlLangSync";
+import { Navbar } from "@/components/Navbar";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -30,6 +31,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <LangProvider>
             <HtmlLangSync />
             {children}
+            <Navbar />
           </LangProvider>
         </ThemeProvider>
       </body>
